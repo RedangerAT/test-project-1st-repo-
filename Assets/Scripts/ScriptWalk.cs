@@ -21,6 +21,6 @@ public class ScriptWalk : MonoBehaviour
             transform.Translate(Vector3.right * forwardSpeed * Time.deltaTime);
 
         }
-
+       // YOOOOOOOOOOOOOO IM COMMUNICATING THRU GITHUB!!!!!
     }
 }
