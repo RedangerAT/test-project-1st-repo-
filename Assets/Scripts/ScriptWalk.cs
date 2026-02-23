@@ -16,11 +16,21 @@ public class ScriptWalk : MonoBehaviour
         {
             transform.Translate(Vector3.left * forwardSpeed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
-        {
+         if (Input.GetKey(KeyCode.D))
+         {
             transform.Translate(Vector3.right * forwardSpeed * Time.deltaTime);
 
-        }
-       // YOOOOOOOOOOOOOO IM COMMUNICATING THRU GITHUB!!!!!
+         }
+         if (Input.GetKey(KeyCode.W))
+         {
+            transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+
+         }
+         if (Input.GetKey(KeyCode.S))
+         {
+            transform.Translate(Vector3.back * forwardSpeed * Time.deltaTime);
+
+         }
+        // YOOOOOOOOOOOOOO IM COMMUNICATING THRU GITHUB!!!!!
     }
 }
