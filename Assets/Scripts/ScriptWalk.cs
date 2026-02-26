@@ -5,32 +5,46 @@ public class ScriptWalk : MonoBehaviour
 
     [SerializeField] private float horizontalSpeed;
     [SerializeField] private float forwardSpeed;
+    private float XLimit;
+    private float NegativeXLimit;
 
+
+
+
+    private void Start()
+    {
+        XLimit = 50f;
+        NegativeXLimit = -50f;
+    }
 
     // Update is called once per frame
     void Update()
     {
   
         
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Translate(Vector3.left * forwardSpeed * Time.deltaTime);
+            if ( transform.position.x > NegativeXLimit)
+            {
+                transform.Translate(Vector3.left * forwardSpeed * Time.deltaTime);
+            }
+         
         }
-         if (Input.GetKey(KeyCode.D))
+         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
          {
-            transform.Translate(Vector3.right * forwardSpeed * Time.deltaTime);
+            if (transform.position.x < XLimit)
+            {
+                transform.Translate(Vector3.right * forwardSpeed * Time.deltaTime);
+            }
+           
 
          }
-         if (Input.GetKey(KeyCode.W))
-         {
-            transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        
+         
+            transform.Translate(Vector3.forward * horizontalSpeed * Time.deltaTime);
 
-         }
-         if (Input.GetKey(KeyCode.S))
-         {
-            transform.Translate(Vector3.back * forwardSpeed * Time.deltaTime);
-
-         }
+         
+        
         // YOOOOOOOOOOOOOO IM COMMUNICATING THRU GITHUB!!!!!
     }
 }
