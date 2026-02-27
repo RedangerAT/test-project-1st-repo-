@@ -44,7 +44,19 @@ public class ScriptWalk : MonoBehaviour
             transform.Translate(Vector3.forward * horizontalSpeed * Time.deltaTime);
 
          
-        
+        /* use this when your gonna make long comments like thissss
+         
+         
+       
+
+
+
+
+
+
+
+
+        hiiiiiiiii*/
         // YOOOOOOOOOOOOOO IM COMMUNICATING THRU GITHUB!!!!!
     }
 }
