@@ -39,7 +39,7 @@ public class ScriptWalk : MonoBehaviour
            
 
          }
-        
+        //yoooo
          
             transform.Translate(Vector3.forward * horizontalSpeed * Time.deltaTime);
 
